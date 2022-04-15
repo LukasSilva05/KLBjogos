@@ -3,12 +3,13 @@ import { StatusBar } from 'expo-status-bar';
 import Login from './login';
 import Main from './main';
 import Details from './details';
+import Carrinho from './carrinho';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+/* import { createDrawerNavigator } from '@react-navigation/drawer'; */
 
 const Stack = createNativeStackNavigator();
-const Drawer = createDrawerNavigator();
+/* const Drawer = createDrawerNavigator(); */
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Main" component={Main} />
           <Stack.Screen name="Details" component={Details} />
+          <Stack.Screen name="Carrinho" component={Carrinho} />
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style="light" />

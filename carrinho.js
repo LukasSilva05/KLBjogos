@@ -4,13 +4,14 @@ import {
     Text,
     TouchableOpacity,
     Image,
-    SafeAreaView
+    SafeAreaView,
+    FlatList,
 } from 'react-native';
 import { Entypo, AntDesign, FontAwesome5 } from '@expo/vector-icons';
 import styles from './style';
 import { ScrollView } from 'react-native-gesture-handler';
 
-function Details({ navigation }) {
+function Carrinho({ navigation }) {
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView>
@@ -25,11 +26,8 @@ function Details({ navigation }) {
                             KLB<Text style={styles.textJogos}>jogos</Text>
                         </Text>
                     </View>
-                    <View style={styles.userAndShop}>
-                        <TouchableOpacity onPress={() => navigation.navigate('Carrinho')}>
-                            <AntDesign name="shoppingcart" size={28} color="white" />
-                        </TouchableOpacity>
-                        <TouchableOpacity>
+                    <View style={styles.user}>
+                        <TouchableOpacity >
                             <FontAwesome5 name="user-circle" size={28} color="white" />
                         </TouchableOpacity>
                     </View>
@@ -39,4 +37,4 @@ function Details({ navigation }) {
     );
 }
 
-export default Details;
+export default Carrinho;

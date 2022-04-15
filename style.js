@@ -96,6 +96,9 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
     },
+    user: {
+        marginRight: 10,
+    },
 
     recomendados: {
         paddingLeft: 15,

@@ -32,7 +32,7 @@ function Main({ navigation }) {
                         </Text>
                     </View>
                     <View style={styles.userAndShop}>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => navigation.navigate('Carrinho')}>
                             <AntDesign name="shoppingcart" size={28} color="white" />
                         </TouchableOpacity>
                         <TouchableOpacity>
