@@ -17,8 +17,8 @@ function Carrinho({ navigation }) {
             <ScrollView>
                 <View style={styles.topBar}>
                     <View style={styles.menuBar}>
-                        <TouchableOpacity>
-                            <AntDesign name="arrowleft" size={24} color="white" onPress={() => navigation.goBack()} />
+                        <TouchableOpacity onPress={() => navigation.goBack()}>
+                            <AntDesign name="arrowleft" size={24} color="white" />
                         </TouchableOpacity>
                     </View>
                     <View style={styles.textBar}>

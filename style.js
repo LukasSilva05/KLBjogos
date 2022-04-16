@@ -117,18 +117,54 @@ const styles = StyleSheet.create({
     },
     img1: {
         height: 205,
-        width: 333,
-        borderRadius: 5,
+        width: 420,
     },
     text: {
         fontSize: 16,
         color: 'white',
     },
-    lancamentos: {
+
+    text2: {
         paddingLeft: 15,
+        fontSize: 16,
+        color: 'white',
+    },
+    text3: {
+        paddingLeft: 5,
+        fontSize: 20,
+        color: 'white'
+    },
+    lancamentos: {
         paddingTop: 30,
     },
-
+    maisVendidos: {
+        paddingTop: 30,
+        paddingBottom: 10
+    },
+    nomeJogo: {
+        margin: 15,
+        padding: 15,
+        borderRadius: 5,
+        backgroundColor: '#A894BD'
+    },
+    imgDetails: {
+        height: 200,
+        width: 390,
+        borderRadius: 5,
+    },
+    money: {
+        margin: 10,
+        padding: 10,
+        borderRadius: 10,
+        alignItems: 'center',
+        backgroundColor: '#47365C'
+    },
+    btCarrinho: {
+        backgroundColor: '#6FCA59',
+        margin: 10,
+        padding: 11,
+        borderRadius: 10,
+    },
     /*   FIM DO STYLE DA TELA PRINCIPAL  */
 });
 

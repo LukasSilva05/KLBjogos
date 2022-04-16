@@ -1,4 +1,4 @@
-﻿import React from 'react';
+﻿import React, { useState } from 'react';
 import {
     View,
     Text,
@@ -12,6 +12,28 @@ import styles from './style';
 import { ScrollView } from 'react-native-gesture-handler';
 
 function Main({ navigation }) {
+
+    const [lancamentos, setimages] = useState([
+        { id: 1, name: 'Elden Ring', value: 'R$ 249,90', image: require('./assets/eldenring.jpg') },
+        { id: 2, name: 'Call Of Duty', value: 'R$ 65,96', image: require('./assets/cod.jpg') },
+        { id: 3, name: 'Bus Simulator 21', value: 'R$ 117,99', image: require('./assets/bus21.jpg') },
+        { id: 4, name: 'Microsoft Flight Simulator', value: 'R$ 249,95', image: require('./assets/pesado.jpg') },
+    ]);
+
+    const [populares, setimages1] = useState([
+        { id: 1, name: 'Grand Theft Auto 5', value: 'R$ 66,66', image: require('./assets/gta.jpg') },
+        { id: 2, name: 'Call Of Duty', value: 'R$ 65,96', image: require('./assets/cod.jpg') },
+        { id: 3, name: 'Fortnite', value: 'Free to Play', image: require('./assets/fort.jpg') },
+        { id: 4, name: 'Euro Truck Simulator 2', value: 'R$ 39,99', image: require('./assets/ETS2.jpg') },
+    ]);
+
+    const [maisVendidos, setimages2] = useState([
+        { id: 1, name: 'Forza Horizon 5', value: 'R$ 249,00', image: require('./assets/forza.jpg') },
+        { id: 2, name: 'Elden Ring', value: 'R$ 249,90', image: require('./assets/eldenring.jpg') },
+        { id: 3, name: 'Call Of Duty', value: 'R$ 65,96', image: require('./assets/cod.jpg') },
+        { id: 4, name: 'Formula 1 2021', value: 'R$ 249,00', image: require('./assets/f1.jpg') },
+    ]);
+
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView>
@@ -42,12 +64,81 @@ function Main({ navigation }) {
                 </View>
                 <View style={styles.recomendados}>
                     <Text style={styles.text}>Recomendados</Text>
-                    <TouchableOpacity style={styles.btImg} onPress={() => navigation.navigate('Details')}>
+                    <TouchableOpacity style={styles.btImg} /* onPress={() => navigation.navigate('Details')} */>
                         <Image style={styles.img1} source={require('./assets/eldenring.jpg')} />
                     </TouchableOpacity>
                 </View>
                 <View style={styles.lancamentos}>
-                    <Text style={styles.text}>Lançamentos</Text>
+                    <Text style={styles.text2}>Lançamentos</Text>
+                    <FlatList
+                        horizontal
+                        showsHorizontalScrollIndicator={false}
+                        data={lancamentos}
+                        renderItem={({ item, index }) => {
+                            return (
+                                <TouchableOpacity onPress={() => navigation.navigate('Details', { jogo: item })}>
+                                    <Image source={item.image}
+                                        key={index}
+                                        style={{
+                                            width: 130,
+                                            height: 150,
+                                            borderRadius: 5,
+                                            marginLeft: 15,
+                                            marginTop: 10,
+                                        }}
+                                    />
+                                </TouchableOpacity>
+                            )
+                        }}
+                    />
+                </View>
+                <View style={styles.lancamentos}>
+                    <Text style={styles.text2}>Populares</Text>
+                    <FlatList
+                        horizontal
+                        showsHorizontalScrollIndicator={false}
+                        data={populares}
+                        renderItem={({ item, index }) => {
+                            return (
+                                <TouchableOpacity onPress={() => navigation.navigate('Details', { jogo: item })}>
+                                    <Image source={item.image}
+                                        key={index}
+                                        style={{
+                                            width: 130,
+                                            height: 150,
+                                            borderRadius: 5,
+                                            marginLeft: 15,
+                                            marginTop: 10,
+                                        }}
+                                    />
+                                </TouchableOpacity>
+                            )
+                        }}
+                    />
+                </View>
+                <View style={styles.maisVendidos}>
+                    <Text style={styles.text2}>Mais Vendidos</Text>
+                    <FlatList
+                        horizontal
+                        showsHorizontalScrollIndicator={false}
+                        data={maisVendidos}
+                        renderItem={({ item, index }) => {
+                            return (
+                                <TouchableOpacity onPress={() => navigation.navigate('Details', { jogo: item })}>
+                                    <Image source={item.image}
+                                        key={index}
+                                        style={{
+                                            width: 130,
+                                            height: 150,
+                                            borderRadius: 5,
+                                            marginLeft: 15,
+                                            marginTop: 10,
+                                        }}
+                                    />
+                                </TouchableOpacity>
+                            )
+                        }}
+                    />
                 </View>
             </ScrollView>
         </SafeAreaView>
