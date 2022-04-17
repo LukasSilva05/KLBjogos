@@ -74,19 +74,10 @@ function Main({ navigation }) {
                         horizontal
                         showsHorizontalScrollIndicator={false}
                         data={lancamentos}
-                        renderItem={({ item, index }) => {
+                        renderItem={({ item }) => {
                             return (
                                 <TouchableOpacity onPress={() => navigation.navigate('Details', { jogo: item })}>
-                                    <Image source={item.image}
-                                        key={index}
-                                        style={{
-                                            width: 130,
-                                            height: 150,
-                                            borderRadius: 5,
-                                            marginLeft: 15,
-                                            marginTop: 10,
-                                        }}
-                                    />
+                                    <Image source={item.image} style={styles.carrocelImagens} />
                                 </TouchableOpacity>
                             )
                         }}
@@ -98,19 +89,10 @@ function Main({ navigation }) {
                         horizontal
                         showsHorizontalScrollIndicator={false}
                         data={populares}
-                        renderItem={({ item, index }) => {
+                        renderItem={({ item }) => {
                             return (
                                 <TouchableOpacity onPress={() => navigation.navigate('Details', { jogo: item })}>
-                                    <Image source={item.image}
-                                        key={index}
-                                        style={{
-                                            width: 130,
-                                            height: 150,
-                                            borderRadius: 5,
-                                            marginLeft: 15,
-                                            marginTop: 10,
-                                        }}
-                                    />
+                                    <Image source={item.image} style={styles.carrocelImagens} />
                                 </TouchableOpacity>
                             )
                         }}
@@ -122,19 +104,10 @@ function Main({ navigation }) {
                         horizontal
                         showsHorizontalScrollIndicator={false}
                         data={maisVendidos}
-                        renderItem={({ item, index }) => {
+                        renderItem={({ item }) => {
                             return (
                                 <TouchableOpacity onPress={() => navigation.navigate('Details', { jogo: item })}>
-                                    <Image source={item.image}
-                                        key={index}
-                                        style={{
-                                            width: 130,
-                                            height: 150,
-                                            borderRadius: 5,
-                                            marginLeft: 15,
-                                            marginTop: 10,
-                                        }}
-                                    />
+                                    <Image source={item.image} style={styles.carrocelImagens} />
                                 </TouchableOpacity>
                             )
                         }}

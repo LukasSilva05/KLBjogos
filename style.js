@@ -165,6 +165,13 @@ const styles = StyleSheet.create({
         padding: 11,
         borderRadius: 10,
     },
+    carrocelImagens: {
+        width: 130,
+        height: 150,
+        borderRadius: 5,
+        marginLeft: 15,
+        marginTop: 10,
+    },
     /*   FIM DO STYLE DA TELA PRINCIPAL  */
 });
 
