@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
         height: 49,
         backgroundColor: '#1C1B1F99',
         borderRadius: 5,
+        fontFamily: 'Audiowide_400Regular'
     },
     submitButton: {
         marginBottom: 5,
@@ -31,6 +32,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginLeft: 12,
         marginRight: 12,
+        fontFamily: 'Audiowide_400Regular'
     },
     botoes: {
         paddingTop: 30,
@@ -61,6 +63,7 @@ const styles = StyleSheet.create({
         padding: 40,
         textAlign: 'center',
         color: 'white',
+        fontFamily: 'Audiowide_400Regular'
     },
 
     /*   FIM DO STYLE DA TELA DE LOGIN  */
@@ -86,10 +89,12 @@ const styles = StyleSheet.create({
     textKLB: {
         fontSize: 30,
         color: 'white',
+        fontFamily: 'Audiowide_400Regular'
     },
     textJogos: {
         fontSize: 12,
         color: 'white',
+        fontFamily: 'Audiowide_400Regular'
     },
     userAndShop: {
         flex: 40,
@@ -107,32 +112,30 @@ const styles = StyleSheet.create({
     },
 
     imgRecomendados: {
-        borderRadius: 5,
-    },
-    btImg: {
         marginTop: 10,
-        marginRight: 10,
+        marginLeft: 15,
+        height: 250,
+        width: 400,
         borderRadius: 5,
-        alignItems: 'center',
     },
-    img1: {
-        height: 205,
-        width: 420,
-    },
+
     text: {
         fontSize: 16,
         color: 'white',
+        fontFamily: 'Audiowide_400Regular'
     },
 
     text2: {
         paddingLeft: 15,
         fontSize: 16,
         color: 'white',
+        fontFamily: 'Audiowide_400Regular'
     },
     text3: {
         paddingLeft: 5,
-        fontSize: 20,
-        color: 'white'
+        fontSize: 15,
+        color: 'white',
+        fontFamily: 'Audiowide_400Regular'
     },
     lancamentos: {
         paddingTop: 30,
@@ -156,7 +159,6 @@ const styles = StyleSheet.create({
         margin: 10,
         padding: 10,
         borderRadius: 10,
-        alignItems: 'center',
         backgroundColor: '#47365C'
     },
     btCarrinho: {

@@ -11,7 +11,6 @@ import styles from "./style"
 function Login({ navigation }) {
     return (
         <View style={styles.container}>
-
             <View style={styles.logo}>
                 <Image style={styles.imagem} source={require('./assets/logoKLB.png')} />
             </View>

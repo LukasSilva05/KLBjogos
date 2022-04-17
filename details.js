@@ -7,7 +7,6 @@ import {
     SafeAreaView
 } from 'react-native';
 import { Entypo, AntDesign, FontAwesome5 } from '@expo/vector-icons';
-import Main from './main';
 import styles from './style';
 import { ScrollView } from 'react-native-gesture-handler';
 
@@ -48,7 +47,7 @@ function Details({ route, navigation }) {
                     </View>
                     <View >
                         <TouchableOpacity style={styles.btCarrinho}>
-                            <Text style={{ color: 'black', fontSize: 18 }}>Adicionar ao carrinho</Text>
+                            <Text style={{ color: 'black', fontSize: 15, fontFamily: 'Audiowide_400Regular' }}>Adicionar ao carrinho</Text>
                         </TouchableOpacity>
                     </View>
                 </View>

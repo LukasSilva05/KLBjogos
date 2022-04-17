@@ -23,7 +23,7 @@ function Main({ navigation }) {
     const [populares, setimages1] = useState([
         { id: 1, name: 'Grand Theft Auto 5', value: 'R$ 66,66', image: require('./assets/gta.jpg') },
         { id: 2, name: 'Call Of Duty', value: 'R$ 65,96', image: require('./assets/cod.jpg') },
-        { id: 3, name: 'Fortnite', value: 'Free to Play', image: require('./assets/fort.jpg') },
+        { id: 3, name: 'Fortnite', value: 'Gratuito', image: require('./assets/fort.jpg') },
         { id: 4, name: 'Euro Truck Simulator 2', value: 'R$ 39,99', image: require('./assets/ETS2.jpg') },
     ]);
 
@@ -64,9 +64,20 @@ function Main({ navigation }) {
                 </View>
                 <View style={styles.recomendados}>
                     <Text style={styles.text}>Recomendados</Text>
-                    <TouchableOpacity style={styles.btImg} /* onPress={() => navigation.navigate('Details')} */>
-                        <Image style={styles.img1} source={require('./assets/eldenring.jpg')} />
-                    </TouchableOpacity>
+                </View>
+                <View>
+                    <FlatList
+                        horizontal
+                        showsHorizontalScrollIndicator={false}
+                        data={lancamentos}
+                        renderItem={({ item }) => {
+                            return (
+                                <TouchableOpacity onPress={() => navigation.navigate('Details', { jogo: item })}>
+                                    <Image source={item.image} style={styles.imgRecomendados} />
+                                </TouchableOpacity>
+                            )
+                        }}
+                    />
                 </View>
                 <View style={styles.lancamentos}>
                     <Text style={styles.text2}>Lançamentos</Text>
