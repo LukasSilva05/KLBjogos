@@ -22,9 +22,8 @@ function Details({ route, navigation }) {
                         </TouchableOpacity>
                     </View>
                     <View style={styles.textBar}>
-                        <Text style={styles.textKLB}>
-                            KLB<Text style={styles.textJogos}>jogos</Text>
-                        </Text>
+                        <Text style={styles.textKLB}> KLB </Text>
+                        <Text style={styles.textJogos}>jogos</Text>
                     </View>
                     <View style={styles.userAndShop}>
                         <TouchableOpacity onPress={() => navigation.navigate('Carrinho')}>

@@ -2,7 +2,7 @@
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#73648A',
+        backgroundColor: '#8262A9',
         flex: 1,
     },
 
@@ -83,8 +83,9 @@ const styles = StyleSheet.create({
     textBar: {
         flex: 120,
         flexDirection: 'column',
-        alignItems: 'center',
-        paddingLeft: 20,
+        alignItems:'center',
+        justifyContent:'center',
+        paddingLeft: 55,
     },
     textKLB: {
         fontSize: 30,
@@ -94,6 +95,8 @@ const styles = StyleSheet.create({
     textJogos: {
         fontSize: 12,
         color: 'white',
+        lineHeight: 11,
+        paddingRight: 4,
         fontFamily: 'Audiowide_400Regular'
     },
     userAndShop: {
@@ -112,8 +115,7 @@ const styles = StyleSheet.create({
     },
 
     imgRecomendados: {
-        marginTop: 10,
-        marginLeft: 15,
+        margin: 10,
         height: 250,
         width: 400,
         borderRadius: 5,

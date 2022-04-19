@@ -22,12 +22,14 @@ function Carrinho({ navigation }) {
                         </TouchableOpacity>
                     </View>
                     <View style={styles.textBar}>
-                        <Text style={styles.textKLB}>
-                            KLB<Text style={styles.textJogos}>jogos</Text>
-                        </Text>
+                        <Text style={styles.textKLB}> KLB </Text>
+                        <Text style={styles.textJogos}>jogos</Text>
                     </View>
-                    <View style={styles.user}>
-                        <TouchableOpacity >
+                    <View style={styles.userAndShop}>
+                        <TouchableOpacity>
+                            <AntDesign name="shoppingcart" size={28} color="white" />
+                        </TouchableOpacity>
+                        <TouchableOpacity>
                             <FontAwesome5 name="user-circle" size={28} color="white" />
                         </TouchableOpacity>
                     </View>
