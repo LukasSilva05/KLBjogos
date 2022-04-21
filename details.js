@@ -71,7 +71,7 @@ function Details({ route, navigation }) {
             </View>
           </View>
         </View>
-        <View style={{ padding: 18 }}>
+        <View style={{ paddingTop: 18, paddingBottom: 5, paddingHorizontal: 18 }}>
           <Text style={styles.infoGames}>
             <Text style={{ textDecorationLine: "underline" }}>
               Data de lançamento
@@ -101,15 +101,11 @@ function Details({ route, navigation }) {
             padding: 18,
           }}
         >
-          <View
-            style={{
-              height: 20,
-              width: 40,
-              backgroundColor: "#DD0404",
-              alignItems: "center",
-            }}
-          >
-            <Text style={{ color: "white", fontSize: 13 }}>{jogo.idade}</Text>
+          <View>
+            <Image source={jogo.idade} style={{
+              height: 25,
+              width: 25,
+            }} />
           </View>
           <View>
             <TouchableOpacity>

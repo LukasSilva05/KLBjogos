@@ -23,7 +23,7 @@ function Main({ navigation }) {
       plataforma:
         "PlayStation 4, Xbox Series X, Xbox One, PlayStation 5, Microsoft Windows",
       genero: "Aventura, RPG, Ação",
-      idade: 16,
+      idade: require("./assets/classificacao-16-anos.png"),
     },
     {
       id: 2,
@@ -34,7 +34,7 @@ function Main({ navigation }) {
       desenvolvedor: "Infinity Ward",
       plataforma: "PlayStation 4, Xbox One, Microsoft Windows",
       genero: "Ação",
-      idade: 16,
+      idade: require("./assets/classificacao-16-anos.png"),
     },
     {
       id: 3,
@@ -46,7 +46,7 @@ function Main({ navigation }) {
       plataforma:
         "Xbox Series X, Xbox One, PlayStation 4, Microsoft Windows, PlayStation 5",
       genero: "Simulação",
-      idade: 16,
+      idade: require("./assets/classificacao-14-anos.png"),
     },
     {
       id: 4,
@@ -57,7 +57,7 @@ function Main({ navigation }) {
       desenvolvedor: "Asobo Studio",
       plataforma: "Xbox Series X, Microsoft Windows, Xbox Cloud Gaming, OpenXR",
       genero: "Simulação",
-      idade: 16,
+      idade: require("./assets/classificacao-14-anos.png"),
     },
   ]);
 
@@ -72,7 +72,7 @@ function Main({ navigation }) {
       plataforma:
         "PlayStation 4, Xbox Series X, Xbox One, PlayStation 3, PlayStation 5, Xbox 360, Microsoft Windows",
       genero: "Aventura, Ação",
-      idade: 16,
+      idade: require("./assets/classificacao-16-anos.png"),
     },
     {
       id: 2,
@@ -83,7 +83,7 @@ function Main({ navigation }) {
       desenvolvedor: "Infinity Ward",
       plataforma: "PlayStation 4, Xbox One, Microsoft Windows",
       genero: "Ação",
-      idade: 16,
+      idade: require("./assets/classificacao-16-anos.png"),
     },
     {
       id: 3,
@@ -95,7 +95,7 @@ function Main({ navigation }) {
       plataforma:
         "Nintendo Switch, PlayStation 4, iOS, Xbox One, Xbox Series X, Android, PlayStation 5, macOS, Microsoft Windows",
       genero: "Battle Royale, Ação",
-      idade: 16,
+      idade: require("./assets/classificacao-14-anos.png"),
     },
     {
       id: 4,
@@ -106,7 +106,7 @@ function Main({ navigation }) {
       desenvolvedor: "SCS Software",
       plataforma: "Microsoft Windows, Linux, Mac OS",
       genero: "Simulador",
-      idade: 16,
+      idade: require("./assets/classificacao-14-anos.png"),
     },
   ]);
 
@@ -120,7 +120,7 @@ function Main({ navigation }) {
       desenvolvedor: "Playground Games",
       plataforma: "Xbox Series X, Xbox One, Android, Microsoft Windows",
       genero: "Simulador, Ação, Aventura, Corrida",
-      idade: 16,
+      idade: require("./assets/classificacao-14-anos.png"),
     },
     {
       id: 2,
@@ -132,7 +132,7 @@ function Main({ navigation }) {
       plataforma:
         "PlayStation 4, Xbox Series X, Xbox One, PlayStation 5, Microsoft Windows",
       genero: "Aventura, RPG, Ação",
-      idade: 16,
+      idade: require("./assets/classificacao-16-anos.png"),
     },
     {
       id: 3,
@@ -143,7 +143,7 @@ function Main({ navigation }) {
       desenvolvedor: "Infinity Ward",
       plataforma: "PlayStation 4, Xbox One, Microsoft Windows",
       genero: "Ação",
-      idade: 16,
+      idade: require("./assets/classificacao-16-anos.png"),
     },
     {
       id: 4,
@@ -155,7 +155,7 @@ function Main({ navigation }) {
       plataforma:
         "PlayStation 4, Xbox One, PlayStation 5, Xbox Series X, Microsoft Windows",
       genero: "Corrida",
-      idade: 16,
+      idade: require("./assets/classificacao-14-anos.png"),
     },
   ]);
 

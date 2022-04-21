@@ -109,13 +109,13 @@ const styles = StyleSheet.create({
   },
 
   recomendados: {
-    paddingLeft: 15,
+    paddingLeft: 10,
     paddingTop: 10,
     paddingBottom: 1,
   },
 
   imgRecomendados: {
-    margin: 10,
+    margin: 8,
     height: 250,
     width: 400,
     borderRadius: 5,
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
   },
 
   text2: {
-    paddingLeft: 15,
+    paddingLeft: 10,
     fontSize: 16,
     color: "white",
     fontFamily: "Audiowide_400Regular",
@@ -173,8 +173,7 @@ const styles = StyleSheet.create({
     width: 130,
     height: 150,
     borderRadius: 5,
-    marginLeft: 15,
-    marginTop: 10,
+    margin: 8,
   },
 
   infoGames: {
