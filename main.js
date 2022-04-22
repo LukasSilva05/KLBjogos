@@ -265,7 +265,6 @@ function Main({ navigation }) {
                 name="menu"
                 size={24}
                 color="white"
-              /* onPress={() => navigation.openDrawer()} */
               />
             </TouchableOpacity>
           </View>

@@ -12,6 +12,7 @@ import styles from './style';
 import { ScrollView } from 'react-native-gesture-handler';
 
 function Carrinho({ route, navigation }) {
+
     const [lancamentos, setimages] = useState([
         {
             id: 1,
