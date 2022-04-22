@@ -147,8 +147,11 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
   },
   nomeJogo: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
     margin: 15,
-    padding: 15,
+    padding: 8,
     borderRadius: 5,
     backgroundColor: "#A894BD",
   },
@@ -181,6 +184,79 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: "white",
     fontFamily: "Audiowide_400Regular",
+  },
+
+  sinopse: {
+    fontSize: 12,
+    textAlign: 'justify',
+    color: "white",
+    fontFamily: "Audiowide_400Regular",
+  },
+  meuCarrinho: {
+    alignItems: 'center',
+    marginVertical: 15,
+    marginHorizontal: 30,
+    padding: 8,
+    borderRadius: 5,
+    backgroundColor: "#A894BD",
+  },
+  text4: {
+    fontSize: 15,
+    color: "white",
+    fontFamily: "Audiowide_400Regular",
+  },
+  itensCarrinho: {
+    margin: 10,
+    backgroundColor: '#A894BD',
+    borderRadius: 5,
+  },
+  imagemCarrinho: {
+    margin: 8,
+    height: 80,
+    width: 130,
+    borderRadius: 5,
+  },
+  moneyCarrinho: {
+    height: 30,
+    width: 85,
+    padding: 10,
+    borderRadius: 10,
+    backgroundColor: "#47365C",
+  },
+  moneyText: {
+    textAlign: 'left',
+    fontSize: 10,
+    color: "white",
+    fontFamily: "Audiowide_400Regular",
+  },
+  nomeCarrinho: {
+    paddingLeft: 4,
+    marginTop: 10,
+    paddingVertical: 10,
+    borderRadius: 10,
+  },
+  btRemover: {
+    backgroundColor: "#DE3636",
+    width: 150,
+    marginHorizontal: 10,
+    marginBottom: 10,
+    padding: 11,
+    borderRadius: 10,
+  },
+
+  botaoComprar: {
+    paddingVertical: 10,
+    flexDirection: "row",
+    justifyContent: "space-around",
+  },
+  submitButtonComprar: {
+    marginBottom: 5,
+    backgroundColor: "#6FCA59",
+    padding: 10,
+    margin: 15,
+    height: 43,
+    width: 168,
+    borderRadius: 100,
   },
   /*   FIM DO STYLE DA TELA PRINCIPAL  */
 });

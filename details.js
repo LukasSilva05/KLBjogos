@@ -12,6 +12,7 @@ import {
   FontAwesome5,
   SimpleLineIcons,
 } from "@expo/vector-icons";
+import { Avatar } from 'react-native-paper';
 import styles from "./style";
 import { ScrollView } from "react-native-gesture-handler";
 
@@ -41,7 +42,11 @@ function Details({ route, navigation }) {
             </View>
           </View>
           <View style={styles.nomeJogo}>
-            <Text style={styles.text3}>{jogo.name}</Text>
+            <Avatar.Image
+              size={45}
+              source={jogo.image}
+            />
+            <Text style={[styles.text3, { fontSize: 15.5 }]}>{jogo.name}</Text>
           </View>
           <View style={{ alignItems: "center" }}>
             <Image style={styles.imgDetails} source={jogo.image} />
@@ -99,6 +104,7 @@ function Details({ route, navigation }) {
             flexDirection: "row",
             justifyContent: "space-between",
             padding: 18,
+            paddingBottom: 25
           }}
         >
           <View>
@@ -113,13 +119,51 @@ function Details({ route, navigation }) {
             </TouchableOpacity>
           </View>
         </View>
+        <Text style={[styles.text3, { fontSize: 15.5, paddingLeft: 15, paddingBottom: 5 }]}>Sobre este jogo</Text>
+        <View
+          style={{
+            borderWidth: 0.5,
+            borderColor: "#A894BD",
+            marginHorizontal: 15,
+          }}
+        />
+        <View style={{ paddingTop: 18, paddingBottom: 5, paddingHorizontal: 16 }}>
+          <Text style={styles.sinopse}>{jogo.sobre}</Text>
+        </View>
+        <Text style={[styles.text3, { fontSize: 15.5, paddingLeft: 15, paddingBottom: 5, paddingTop: 18 }]}>Requisitos</Text>
         <View
           style={{
             borderWidth: 0.4,
             borderColor: "#A894BD",
-            marginHorizontal: 18,
+            marginHorizontal: 15,
           }}
         />
+        <View style={{ paddingTop: 18, paddingBottom: 5, paddingHorizontal: 18 }}>
+          <Text style={styles.infoGames}>
+            <Text style={{ textDecorationLine: "underline" }}>
+              SO
+            </Text>
+            : {jogo.requisitos.so}
+          </Text>
+          <Text style={styles.infoGames}>
+            <Text style={{ textDecorationLine: "underline" }}>
+              Processador
+            </Text>
+            : {jogo.requisitos.processador}
+          </Text>
+          <Text style={styles.infoGames}>
+            <Text style={{ textDecorationLine: "underline" }}>Memoria</Text>
+            : {jogo.requisitos.memoria}
+          </Text>
+          <Text style={styles.infoGames}>
+            <Text style={{ textDecorationLine: "underline" }}>Placa de Vídeo</Text>:{" "}
+            {jogo.requisitos.placa}
+          </Text>
+          <Text style={styles.infoGames}>
+            <Text style={{ textDecorationLine: "underline" }}>Armazenamento</Text>:{" "}
+            {jogo.requisitos.armazenamento}
+          </Text>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
