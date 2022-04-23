@@ -18,6 +18,7 @@ import { ScrollView } from "react-native-gesture-handler";
 
 function Details({ route, navigation }) {
   let jogo = route.params["jogo"];
+
   return (
     <SafeAreaView style={{ backgroundColor: "#5A4E65", flex: 1 }}>
       <ScrollView>
@@ -62,7 +63,9 @@ function Details({ route, navigation }) {
               <Text style={styles.text3}>{jogo.value}</Text>
             </View>
             <View>
-              <TouchableOpacity style={styles.btCarrinho}>
+              <TouchableOpacity
+                style={styles.btCarrinho}
+              >
                 <Text
                   style={{
                     color: "black",

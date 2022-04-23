@@ -10,22 +10,17 @@ import {
 import { Entypo, AntDesign, FontAwesome5 } from '@expo/vector-icons';
 import styles from './style';
 import { ScrollView } from 'react-native-gesture-handler';
-import axios from 'axios';
-import api from './api';
+import api from './api'
 
 function Carrinho({ navigation }) {
 
     const [jogos, setJogos] = useState([])
 
-    console.log(jogos);
-
     useEffect(() => {
-        fetch('http://localhost:3000/jogos')
-            .then((response) => response.json())
-            .then((json) => setJogos(json))
-            .catch((error) => console.error(error))
-    }, []);
-
+        api.get('/carrinho').then(response => {
+            setJogos(response.data)
+        })
+    }, [])
 
     return (
         <SafeAreaView style={styles.container}>
@@ -63,7 +58,7 @@ function Carrinho({ navigation }) {
                             return (
                                 <View style={styles.itensCarrinho}>
                                     <View style={{ flex: 1, flexDirection: 'row', }}>
-                                        <Image style={styles.imagemCarrinho} />
+                                        <Image source={item.image} style={styles.imagemCarrinho} />
                                         <View style={{ flex: 1, flexDirection: 'column' }}>
                                             <View style={styles.nomeCarrinho}>
                                                 <Text style={styles.moneyText}>{item.name}</Text>

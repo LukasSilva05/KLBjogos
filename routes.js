@@ -88,7 +88,7 @@ const dbCarrinho = [
         id: 4,
         name: "Microsoft Flight Simulator",
         value: "R$ 249,95",
-        image: "./assets/pesado.jpg",
+        image: "require('./assets/pesado.jpg')",
         data: "18 de agosto de 2020",
         desenvolvedor: "Asobo Studio",
         plataforma: "Xbox Series X, Microsoft Windows, Xbox Cloud Gaming, OpenXR",
@@ -104,10 +104,6 @@ const dbCarrinho = [
         }
     },
 ]
-
-router.get('/jogos', (req, res) => {
-    res.json(db)
-})
 
 router.get('/carrinho', (req, res) => {
     res.json(dbCarrinho)
