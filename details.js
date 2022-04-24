@@ -20,6 +20,19 @@ import api from './api'
 function Details({ route, navigation }) {
   let jogo = route.params["jogo"];
 
+  const jogoPost = () => {
+    api.post('/carrinho', {
+      name: 'Elden Ring',
+      value: 'R$ 250,00'
+    })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+  }
+
   return (
     <SafeAreaView style={{ backgroundColor: "#5A4E65", flex: 1 }}>
       <ScrollView>
