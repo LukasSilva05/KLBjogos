@@ -289,6 +289,7 @@ function Main({ navigation }) {
             horizontal
             showsHorizontalScrollIndicator={false}
             data={lancamentos}
+            keyExtractor={item => item.id}
             renderItem={({ item }) => {
               return (
                 <TouchableOpacity
@@ -306,6 +307,7 @@ function Main({ navigation }) {
             horizontal
             showsHorizontalScrollIndicator={false}
             data={lancamentos}
+            keyExtractor={item => item.id}
             renderItem={({ item }) => {
               return (
                 <TouchableOpacity
@@ -323,6 +325,7 @@ function Main({ navigation }) {
             horizontal
             showsHorizontalScrollIndicator={false}
             data={populares}
+            keyExtractor={item => item.id}
             renderItem={({ item }) => {
               return (
                 <TouchableOpacity
@@ -340,6 +343,7 @@ function Main({ navigation }) {
             horizontal
             showsHorizontalScrollIndicator={false}
             data={maisVendidos}
+            keyExtractor={item => item.id}
             renderItem={({ item }) => {
               return (
                 <TouchableOpacity

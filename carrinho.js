@@ -54,6 +54,7 @@ function Carrinho({ navigation }) {
                     <FlatList
                         showsHorizontalScrollIndicator={false}
                         data={jogos}
+                        keyExtractor={item => item.id}
                         renderItem={({ item }) => {
                             return (
                                 <View style={styles.itensCarrinho}>
@@ -104,7 +105,7 @@ function Carrinho({ navigation }) {
                 <View style={styles.botaoComprar}>
                     <TouchableOpacity
                         style={styles.submitButtonComprar}
-                        onPress={() => navigation.navigate('Main')}>
+                        onPress={() => alert('Compra Realizada!')}>
                         <Text style={styles.submitButtonText}> COMPRAR </Text>
                     </TouchableOpacity>
                 </View>

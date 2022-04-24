@@ -15,6 +15,7 @@ import {
 import { Avatar } from 'react-native-paper';
 import styles from "./style";
 import { ScrollView } from "react-native-gesture-handler";
+import api from './api'
 
 function Details({ route, navigation }) {
   let jogo = route.params["jogo"];
