@@ -1,18 +1,14 @@
-﻿const express = require('express')
-const router = express.Router()
-router.use(express.json())
+﻿const fs = require("fs").promises;
 
-const dbCarrinho = [
-    {
-        id: 5,
-        name: "Microsoft Flight Simulator",
-        value: "R$ 249,95",
-        image: "require('./assets/pesado.jpg')",
-    },
-]
+const express = require("express");
 
-router.get('/carrinho', (req, res) => {
-    res.send(dbCarrinho)
-})
+const router = express.Router();
+router.use(express.json());
 
-module.exports = router
+router.get("/", async (req, res) => {
+    const data = await fs.readFile(global.fileName, "utf8");
+    const json = JSON.parse(data);
+    res.send(json.carrinho);
+});
+
+module.exports = router;

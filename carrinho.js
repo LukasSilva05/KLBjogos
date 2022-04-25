@@ -17,10 +17,18 @@ function Carrinho({ navigation }) {
     const [jogos, setJogos] = useState([])
 
     useEffect(() => {
-        api.get('/carrinho').then(response => {
+        api.get('/').then(response => {
             setJogos(response.data)
         })
     }, [])
+
+    const postJogo = () => {
+        api.post("/", {
+            id: 2,
+            name: 'COD',
+            value: 'R$ 100,00'
+        }).then(response => console.log(response.data)).catch(error => console.log(error))
+    }
 
     return (
         <SafeAreaView style={styles.container}>
@@ -59,7 +67,7 @@ function Carrinho({ navigation }) {
                             return (
                                 <View style={styles.itensCarrinho}>
                                     <View style={{ flex: 1, flexDirection: 'row', }}>
-                                        <Image source={item.image} style={styles.imagemCarrinho} />
+                                        <Image style={styles.imagemCarrinho} />
                                         <View style={{ flex: 1, flexDirection: 'column' }}>
                                             <View style={styles.nomeCarrinho}>
                                                 <Text style={styles.moneyText}>{item.name}</Text>
