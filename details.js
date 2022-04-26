@@ -6,33 +6,27 @@ import {
   Image,
   SafeAreaView,
 } from "react-native";
-import { AntDesign, FontAwesome5, SimpleLineIcons } from "@expo/vector-icons";
-import { Avatar } from "react-native-paper";
+import {
+  Entypo,
+  AntDesign,
+  FontAwesome5,
+  SimpleLineIcons,
+} from "@expo/vector-icons";
+import { Avatar } from 'react-native-paper';
 import styles from "./style";
 import { ScrollView } from "react-native-gesture-handler";
-import api from "./api";
+import api from './api'
 
 function Details({ route, navigation }) {
   let jogo = route.params["jogo"];
 
   const postJogo = () => {
-<<<<<<< HEAD
     api.post("/", {
       name: jogo.name,
       value: jogo.value
     })
   }
 
-=======
-    api
-      .post("/", {
-        name: jogo.name,
-        value: jogo.value,
-      })
-      .then((response) => console.log(response.data))
-      .catch((error) => console.log(error));
-  };
->>>>>>> 30a3d1243a3b367d88bbea2d80fb1480aedf4870
   return (
     <SafeAreaView style={{ backgroundColor: "#5A4E65", flex: 1 }}>
       <ScrollView>
@@ -57,7 +51,10 @@ function Details({ route, navigation }) {
             </View>
           </View>
           <View style={styles.nomeJogo}>
-            <Avatar.Image size={45} source={jogo.image} />
+            <Avatar.Image
+              size={45}
+              source={jogo.image}
+            />
             <Text style={[styles.text3, { fontSize: 15.5 }]}>{jogo.name}</Text>
           </View>
           <View style={{ alignItems: "center" }}>
@@ -74,7 +71,9 @@ function Details({ route, navigation }) {
               <Text style={styles.text3}>{jogo.value}</Text>
             </View>
             <View>
-              <TouchableOpacity style={styles.btCarrinho}>
+              <TouchableOpacity
+                style={styles.btCarrinho}
+              >
                 <Text
                   style={{
                     color: "black",
@@ -89,9 +88,7 @@ function Details({ route, navigation }) {
             </View>
           </View>
         </View>
-        <View
-          style={{ paddingTop: 18, paddingBottom: 5, paddingHorizontal: 18 }}
-        >
+        <View style={{ paddingTop: 18, paddingBottom: 5, paddingHorizontal: 18 }}>
           <Text style={styles.infoGames}>
             <Text style={{ textDecorationLine: "underline" }}>
               Data de lançamento
@@ -119,17 +116,14 @@ function Details({ route, navigation }) {
             flexDirection: "row",
             justifyContent: "space-between",
             padding: 18,
-            paddingBottom: 25,
+            paddingBottom: 25
           }}
         >
           <View>
-            <Image
-              source={jogo.idade}
-              style={{
-                height: 25,
-                width: 25,
-              }}
-            />
+            <Image source={jogo.idade} style={{
+              height: 25,
+              width: 25,
+            }} />
           </View>
           <View>
             <TouchableOpacity>
@@ -137,14 +131,7 @@ function Details({ route, navigation }) {
             </TouchableOpacity>
           </View>
         </View>
-        <Text
-          style={[
-            styles.text3,
-            { fontSize: 15.5, paddingLeft: 15, paddingBottom: 5 },
-          ]}
-        >
-          Sobre este jogo
-        </Text>
+        <Text style={[styles.text3, { fontSize: 15.5, paddingLeft: 15, paddingBottom: 5 }]}>Sobre este jogo</Text>
         <View
           style={{
             borderWidth: 0.5,
@@ -152,24 +139,10 @@ function Details({ route, navigation }) {
             marginHorizontal: 15,
           }}
         />
-        <View
-          style={{ paddingTop: 18, paddingBottom: 5, paddingHorizontal: 16 }}
-        >
+        <View style={{ paddingTop: 18, paddingBottom: 5, paddingHorizontal: 16 }}>
           <Text style={styles.sinopse}>{jogo.sobre}</Text>
         </View>
-        <Text
-          style={[
-            styles.text3,
-            {
-              fontSize: 15.5,
-              paddingLeft: 15,
-              paddingBottom: 5,
-              paddingTop: 18,
-            },
-          ]}
-        >
-          Requisitos
-        </Text>
+        <Text style={[styles.text3, { fontSize: 15.5, paddingLeft: 15, paddingBottom: 5, paddingTop: 18 }]}>Requisitos</Text>
         <View
           style={{
             borderWidth: 0.4,
@@ -177,32 +150,30 @@ function Details({ route, navigation }) {
             marginHorizontal: 15,
           }}
         />
-        <View
-          style={{ paddingTop: 18, paddingBottom: 5, paddingHorizontal: 18 }}
-        >
+        <View style={{ paddingTop: 18, paddingBottom: 5, paddingHorizontal: 18 }}>
           <Text style={styles.infoGames}>
-            <Text style={{ textDecorationLine: "underline" }}>SO</Text>:{" "}
-            {jogo.requisitos.so}
+            <Text style={{ textDecorationLine: "underline" }}>
+              SO
+            </Text>
+            : {jogo.requisitos.so}
           </Text>
           <Text style={styles.infoGames}>
-            <Text style={{ textDecorationLine: "underline" }}>Processador</Text>
+            <Text style={{ textDecorationLine: "underline" }}>
+              Processador
+            </Text>
             : {jogo.requisitos.processador}
           </Text>
           <Text style={styles.infoGames}>
-            <Text style={{ textDecorationLine: "underline" }}>Memoria</Text>:{" "}
-            {jogo.requisitos.memoria}
+            <Text style={{ textDecorationLine: "underline" }}>Memoria</Text>
+            : {jogo.requisitos.memoria}
           </Text>
           <Text style={styles.infoGames}>
-            <Text style={{ textDecorationLine: "underline" }}>
-              Placa de Vídeo
-            </Text>
-            : {jogo.requisitos.placa}
+            <Text style={{ textDecorationLine: "underline" }}>Placa de Vídeo</Text>:{" "}
+            {jogo.requisitos.placa}
           </Text>
           <Text style={styles.infoGames}>
-            <Text style={{ textDecorationLine: "underline" }}>
-              Armazenamento
-            </Text>
-            : {jogo.requisitos.armazenamento}
+            <Text style={{ textDecorationLine: "underline" }}>Armazenamento</Text>:{" "}
+            {jogo.requisitos.armazenamento}
           </Text>
         </View>
       </ScrollView>
