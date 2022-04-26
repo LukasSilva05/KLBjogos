@@ -20,17 +20,11 @@ import api from './api'
 function Details({ route, navigation }) {
   let jogo = route.params["jogo"];
 
-  const jogoPost = () => {
-    api.post('/carrinho', {
-      name: 'Elden Ring',
-      value: 'R$ 250,00'
+  const postJogo = () => {
+    api.post("/", {
+      name: jogo.name,
+      value: jogo.value
     })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      })
   }
 
   return (
@@ -86,6 +80,7 @@ function Details({ route, navigation }) {
                     fontSize: 15,
                     fontFamily: "Audiowide_400Regular",
                   }}
+                  onPress={() => postJogo()}
                 >
                   Adicionar ao carrinho
                 </Text>

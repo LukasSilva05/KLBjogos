@@ -22,12 +22,9 @@ function Carrinho({ navigation }) {
         })
     }, [])
 
-    const postJogo = () => {
-        api.post("/", {
-            id: 2,
-            name: 'COD',
-            value: 'R$ 100,00'
-        }).then(response => console.log(response.data)).catch(error => console.log(error))
+    const deleteJogo = (id) => {
+        api.delete(`/${id}`)
+        alert('Removido do carrinho')
     }
 
     return (
@@ -85,6 +82,9 @@ function Carrinho({ navigation }) {
                                                     color: "white",
                                                     fontSize: 10,
                                                     fontFamily: "Audiowide_400Regular",
+                                                }}
+                                                onPress={() => {
+                                                    deleteJogo(item.id)
                                                 }}
                                             >
                                                 Remover do carrinho
