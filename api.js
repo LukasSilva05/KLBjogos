@@ -1,7 +1,7 @@
-﻿import axios from 'axios'
+﻿import axios from "axios";
 
 const api = axios.create({
-    baseURL: 'http://172.18.36.145:3000/carrinho'
-})
+  baseURL: "http://10.220.30.113:3000/carrinho",
+});
 
-export default api
+export default api;
