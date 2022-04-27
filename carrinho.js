@@ -7,7 +7,7 @@ import {
   SafeAreaView,
   FlatList,
 } from "react-native";
-import { AntDesign, FontAwesome5 } from "@expo/vector-icons";
+import { AntDesign} from "@expo/vector-icons";
 import styles from "./style";
 import { ScrollView } from "react-native-gesture-handler";
 import api from "./api";

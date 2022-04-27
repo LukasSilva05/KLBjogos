@@ -7,9 +7,7 @@ import {
   SafeAreaView,
 } from "react-native";
 import {
-  Entypo,
   AntDesign,
-  FontAwesome5,
   SimpleLineIcons,
 } from "@expo/vector-icons";
 import { Avatar } from "react-native-paper";
@@ -25,6 +23,7 @@ function Details({ route, navigation }) {
       nome: jogo.name,
       valor: jogo.value,
     });
+    alert(`Adicionado ao carrinho!`)
   };
 
   return (
