@@ -1,4 +1,4 @@
-﻿﻿import React from "react";
+﻿import React from "react";
 import {
   View,
   Text,
@@ -6,7 +6,12 @@ import {
   Image,
   SafeAreaView,
 } from "react-native";
-import { AntDesign, FontAwesome5, SimpleLineIcons } from "@expo/vector-icons";
+import {
+  Entypo,
+  AntDesign,
+  FontAwesome5,
+  SimpleLineIcons,
+} from "@expo/vector-icons";
 import { Avatar } from "react-native-paper";
 import styles from "./style";
 import { ScrollView } from "react-native-gesture-handler";
