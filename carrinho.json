@@ -1,1 +1,16 @@
-{"nextId":4,"carrinho":[{"id":2,"name":"Elden Ring","value":"R$ 249,90"},{"id":3,"name":"Microsoft Flight Simulator","value":"R$ 249,95"}]}
+{
+    "nextId": 6,
+    "carrinho": [{
+        "id": 2,
+        "name": "Elden Ring",
+        "value": "R$ 249,90"
+    }, {
+        "id": 4,
+        "name": "Call Of Duty: Modern Warfare",
+        "value": "R$ 65,96"
+    }, {
+        "id": 5,
+        "name": "Elden Ring",
+        "value": "R$ 249,90"
+    }]
+}

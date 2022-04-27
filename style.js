@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    paddingLeft: 30,
+    paddingLeft: 10,
   },
   textKLB: {
     fontSize: 30,
@@ -148,8 +148,8 @@ const styles = StyleSheet.create({
   },
   nomeJogo: {
     flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     margin: 15,
     padding: 8,
     borderRadius: 5,
@@ -188,12 +188,12 @@ const styles = StyleSheet.create({
 
   sinopse: {
     fontSize: 12,
-    textAlign: 'justify',
+    textAlign: "justify",
     color: "white",
     fontFamily: "Audiowide_400Regular",
   },
   meuCarrinho: {
-    alignItems: 'center',
+    alignItems: "center",
     marginVertical: 15,
     marginHorizontal: 30,
     padding: 8,
@@ -207,7 +207,7 @@ const styles = StyleSheet.create({
   },
   itensCarrinho: {
     margin: 10,
-    backgroundColor: '#A894BD',
+    backgroundColor: "#A894BD",
     borderRadius: 5,
   },
   imagemCarrinho: {
@@ -224,7 +224,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#47365C",
   },
   moneyText: {
-    textAlign: 'left',
+    textAlign: "left",
     fontSize: 10,
     color: "white",
     fontFamily: "Audiowide_400Regular",

@@ -21,11 +21,9 @@ function Carrinho({ navigation }) {
     });
   }, []);
 
-  const deleteJogo = () => {
-    api
-      .delete(`/`)
-      .then((response) => console.log(response.data))
-      .catch((error) => console.log(error));
+  const deleteJogo = (id) => {
+    api.delete(`/${id}`);
+    alert("Removido do carrinho");
   };
 
   return (
@@ -41,12 +39,9 @@ function Carrinho({ navigation }) {
             <Text style={styles.textKLB}> KLB </Text>
             <Text style={styles.textJogos}>jogos</Text>
           </View>
-          <View style={styles.userAndShop}>
+          <View>
             <TouchableOpacity>
               <AntDesign name="shoppingcart" size={28} color="white" />
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <FontAwesome5 name="user-circle" size={28} color="white" />
             </TouchableOpacity>
           </View>
         </View>
@@ -86,6 +81,9 @@ function Carrinho({ navigation }) {
                           fontSize: 10,
                           fontFamily: "Audiowide_400Regular",
                         }}
+                        onPress={() => {
+                          deleteJogo(item.id);
+                        }}
                       >
                         Remover do carrinho
                       </Text>
@@ -119,7 +117,7 @@ function Carrinho({ navigation }) {
         <View style={styles.botaoComprar}>
           <TouchableOpacity
             style={styles.submitButtonComprar}
-            onPress={() => alert("Compra realizada!")}
+            onPress={() => alert("Compra Realizada!")}
           >
             <Text style={styles.submitButtonText}> COMPRAR </Text>
           </TouchableOpacity>

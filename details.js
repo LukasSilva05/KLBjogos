@@ -1,4 +1,4 @@
-﻿import React from "react";
+﻿﻿import React from "react";
 import {
   View,
   Text,
@@ -16,14 +16,12 @@ function Details({ route, navigation }) {
   let jogo = route.params["jogo"];
 
   const postJogo = () => {
-    api
-      .post("/", {
-        name: jogo.name,
-        value: jogo.value,
-      })
-      .then((response) => console.log(response.data))
-      .catch((error) => console.log(error));
+    api.post("/", {
+      name: jogo.name,
+      value: jogo.value,
+    });
   };
+
   return (
     <SafeAreaView style={{ backgroundColor: "#5A4E65", flex: 1 }}>
       <ScrollView>
@@ -38,12 +36,9 @@ function Details({ route, navigation }) {
               <Text style={styles.textKLB}> KLB </Text>
               <Text style={styles.textJogos}>jogos</Text>
             </View>
-            <View style={styles.userAndShop}>
+            <View>
               <TouchableOpacity onPress={() => navigation.navigate("Carrinho")}>
                 <AntDesign name="shoppingcart" size={28} color="white" />
-              </TouchableOpacity>
-              <TouchableOpacity>
-                <FontAwesome5 name="user-circle" size={28} color="white" />
               </TouchableOpacity>
             </View>
           </View>
