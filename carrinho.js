@@ -65,10 +65,10 @@ function Carrinho({ navigation }) {
                     <Image style={styles.imagemCarrinho} />
                     <View style={{ flex: 1, flexDirection: "column" }}>
                       <View style={styles.nomeCarrinho}>
-                        <Text style={styles.moneyText}>{item.name}</Text>
+                        <Text style={styles.moneyText}>{item.nome}</Text>
                       </View>
                       <View style={styles.moneyCarrinho}>
-                        <Text style={styles.moneyText}>{item.value}</Text>
+                        <Text style={styles.moneyText}>{item.valor}</Text>
                       </View>
                     </View>
                   </View>

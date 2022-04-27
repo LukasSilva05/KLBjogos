@@ -22,8 +22,8 @@ function Details({ route, navigation }) {
 
   const postJogo = () => {
     api.post("/", {
-      name: jogo.name,
-      value: jogo.value,
+      nome: jogo.name,
+      valor: jogo.value,
     });
   };
 
